@@ -4,9 +4,17 @@ steps:
   entrypoint: npm
   args: ['install']
 # Run tests
-- name: node
-  entrypoint: npm
-  args: ['test']
+# - name: node
+#   entrypoint: npm
+#   args: ['test']
+
+- id: "cypress run"
+  name: cypress/base
+  entrypoint: "bash"
+  args:
+      - "-c"
+      - |
+        node_modules/.bin/cypress run
 # Run custom commands
 - name: node
   entrypoint: npm
