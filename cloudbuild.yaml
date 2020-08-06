@@ -14,7 +14,7 @@ steps:
   args:
       - "-c"
       - |
-        node_modules/.bin/cypress run
+        node_modules/.bin/cypress run start-test 5000
 # Run custom commands
 - name: node
   entrypoint: npm
